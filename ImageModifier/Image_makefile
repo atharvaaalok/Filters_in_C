@@ -1,0 +1,9 @@
+TARGET = Image_executable
+OBJS = filters.o main.o
+
+all::$(TARGET)
+$(TARGET):$(OBJS)
+	cc  $(OBJS) -lm -o $@
+
+clean:
+	rm *.o $(OBJ)
